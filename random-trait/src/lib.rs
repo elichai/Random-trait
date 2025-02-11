@@ -163,7 +163,7 @@ pub trait Random {
     /// Returns a random `bool` with 50/50 probability.
     fn get_bool(&mut self) -> bool {
         // TODO: More research, least/most significant bit?
-        let bit = self.get_u8() & 0b1000_0000;
+        let bit = self.get_u8() & 0b000_0001;
         debug_assert!(bit < 2);
         bit == 1
     }
